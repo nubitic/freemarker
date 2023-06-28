@@ -19,8 +19,8 @@
 
 package freemarker.ext.jsp;
 
-import javax.servlet.ServletContext;
-import javax.servlet.jsp.JspApplicationContext;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.jsp.JspApplicationContext;
 
 /**
  */

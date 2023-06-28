@@ -19,8 +19,8 @@
 
 package freemarker.ext.servlet;
 
-import javax.servlet.GenericServlet;
-import javax.servlet.ServletContext;
+import jakarta.servlet.GenericServlet;
+import jakarta.servlet.ServletContext;
 
 import freemarker.template.ObjectWrapper;
 import freemarker.template.TemplateHashModel;

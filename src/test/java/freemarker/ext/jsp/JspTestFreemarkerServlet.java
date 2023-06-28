@@ -19,7 +19,7 @@
 
 package freemarker.ext.jsp;
 
-import javax.servlet.ServletContext;
+import jakarta.servlet.ServletContext;
 
 import freemarker.ext.servlet.FreemarkerServlet;
 import freemarker.template.ObjectWrapper;

@@ -22,9 +22,9 @@ package freemarker.ext.jsp.taglibmembers;
 import java.io.IOException;
 import java.util.Date;
 
-import javax.servlet.jsp.JspContext;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.JspContext;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.JspWriter;
 
 import freemarker.template.utility.DateUtil;
 import freemarker.template.utility.DateUtil.TrivialDateToISO8601CalendarFactory;

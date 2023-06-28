@@ -23,7 +23,7 @@
 <!DOCTYPE ivy-module [
     <!ENTITY jetty.version "7.6.21.v20160908">
     <!ENTITY slf4j.version "1.6.1">
-    <!ENTITY spring.version "2.5.6.SEC03">
+    <!ENTITY spring.version "6.0.0">
 ]>
 <ivy-module version="2.0">
   <info organisation="org.freemarker" module="freemarker">
@@ -45,11 +45,8 @@
         description="for building FreeMarker without dependencies that optinal dependencies"
     />
 
-    <conf name="build.jsp2.0" extends="build.base"
-        description="for building FreeMarker with JSP 2.0 support"
-    />
-    <conf name="build.jsp2.1" extends="build.base"
-        description="for building FreeMarker with JSP 2.1 support"
+    <conf name="build.jsp3.0.0" extends="build.base"
+        description="for building FreeMarker with Jakarta-JSP 3.0.0 support"
     />
 
     <conf name="build.jython2.0" extends="build.base"
@@ -103,11 +100,10 @@
       <!-- The lowerst supported xml-apis version depends on JDK version; prevent any collision: -->
       <exclude org="xml-apis" module="xml-apis" />
     </dependency>
-    
-    <dependency org="javax.servlet.jsp" name="jsp-api" rev="2.0" conf="build.jsp2.0->default" />
-    <dependency org="javax.servlet" name="servlet-api" rev="2.4" conf="build.jsp2.0->default" />
-    <dependency org="javax.servlet.jsp" name="jsp-api" rev="2.1" conf="build.jsp2.1->default" />
-    <dependency org="javax.servlet" name="servlet-api" rev="2.5" conf="build.jsp2.1->default" />
+
+    <dependency org="jakarta.servlet.jsp" name="jakarta.servlet.jsp-api" rev="3.0.0" conf="build.jsp3.0.0->default; test->default" />
+    <dependency org="jakarta.servlet" name="jakarta.servlet-api" rev="5.0.0" conf="build.jsp3.0.0->default; test->default" />
+    <dependency org="jakarta.el" name="jakarta.el-api" rev="4.0.0" conf="build.jsp3.0.0->default; test->default" />
     
     <dependency org="rhino" name="js" rev="1.6R1" conf="build.base->default" />
 
@@ -183,7 +179,7 @@
     
     <!-- Ensure that JSP versions don't accidentally hide each-other -->
     
-    <conflict org="javax.servlet.jsp" module="jsp-api" manager="strict" />
+    <conflict org="jakarta.servlet.jsp" module="jakarta.servlet.jsp-api" manager="strict" />
     
   </dependencies>
 </ivy-module>

@@ -24,12 +24,12 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Map;
 
-import javax.servlet.jsp.JspContext;
-import javax.servlet.jsp.JspException;
-import javax.servlet.jsp.tagext.JspFragment;
-import javax.servlet.jsp.tagext.JspTag;
-import javax.servlet.jsp.tagext.SimpleTag;
-import javax.servlet.jsp.tagext.Tag;
+import jakarta.servlet.jsp.JspContext;
+import jakarta.servlet.jsp.JspException;
+import jakarta.servlet.jsp.tagext.JspFragment;
+import jakarta.servlet.jsp.tagext.JspTag;
+import jakarta.servlet.jsp.tagext.SimpleTag;
+import jakarta.servlet.jsp.tagext.Tag;
 
 import freemarker.core.Environment;
 import freemarker.template.TemplateDirectiveBody;

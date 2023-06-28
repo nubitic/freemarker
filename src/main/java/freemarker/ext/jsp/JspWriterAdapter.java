@@ -22,7 +22,7 @@ package freemarker.ext.jsp;
 import java.io.IOException;
 import java.io.Writer;
 
-import javax.servlet.jsp.JspWriter;
+import jakarta.servlet.jsp.JspWriter;
 
 import freemarker.template.utility.SecurityUtilities;
 

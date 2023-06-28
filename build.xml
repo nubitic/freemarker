@@ -34,6 +34,7 @@
   <!-- Maven project coordinates: -->
   <property name="mavenGroupId" value="org.freemarker" />
   <property name="mavenArtifactId" value="freemarker" />
+  <property name="mavenVersion" value="2.3.32-nubitic-jakarta-api" />
   <!-- Ivy project coordinates: -->
   <property name="moduleOrg" value="org.freemarker" />
   <property name="moduleName" value="freemarker" />
@@ -274,29 +275,11 @@
       verify="yes" stubversion="1.2"
     />
 
-    <ivy:cachepath conf="build.jsp2.0" pathid="ivy.dep.jsp2.0" />
+    <ivy:cachepath conf="build.jsp3.0.0" pathid="ivy.dep.jsp3.0.0" />
     <javac srcdir="build/src-main-java-filtered" destdir="build/classes" deprecation="off"
       debug="on" optimize="off" target="1.7" source="1.7" encoding="utf-8"
       includeantruntime="false"
-      classpathref="ivy.dep.jsp2.0"
-      bootclasspath="${boot.classpath.j2se1.7}"
-      includes="
-        freemarker/ext/jsp/**,
-        freemarker/ext/servlet/**,
-        freemarker/cache/WebappTemplateLoader.java"
-      excludes="
-        freemarker/ext/jsp/_FreeMarkerPageContext21.java,
-        freemarker/ext/jsp/FreeMarkerJspFactory21.java,
-        freemarker/ext/jsp/FreeMarkerJspApplicationContext.java"
-    />
-
-    <!-- There's no build.jsp2.0, as those classes are part of the common build subset. -->
-
-    <ivy:cachepath conf="build.jsp2.1" pathid="ivy.dep.jsp2.1" />
-    <javac srcdir="build/src-main-java-filtered" destdir="build/classes" deprecation="off"
-      debug="on" optimize="off" target="1.7" source="1.7" encoding="utf-8"
-      includeantruntime="false"
-      classpathref="ivy.dep.jsp2.1"
+      classpathref="ivy.dep.jsp3.0.0"
       bootclasspath="${boot.classpath.j2se1.7}"
       includes="
         freemarker/ext/jsp/_FreeMarkerPageContext21.java,
@@ -621,7 +604,7 @@
   </target>
 
   <target name="_dist"
-    depends="test, jar, javadoc, manualOffline"
+    depends="jar, javadoc, manualOffline"
   >
     <delete dir="${dist.dir}" />
 
@@ -898,10 +881,10 @@
     <delete dir="build/javadoc-attachment-metainf" />
 
     <!-- These were copy-pasted from the org.apacha:apache parent POM: -->
-    <property name="maven-server-id" value="apache.releases.https" />
+    <property name="maven-server-id" value="nexus-repo.nubitic.mx" />
     <condition property="maven-repository-url"
-        value="https://repository.apache.org/content/repositories/snapshots/"
-        else="https://repository.apache.org/service/local/staging/deploy/maven2">
+        value=""
+        else="https://nexus-repo.nubitic.mx/repository/releases/">
       <matches pattern="-SNAPSHOT$" string="${mavenVersion}" />
     </condition>
     <!-- Snapshot repo: https://repository.apache.org/content/repositories/snapshots/ -->

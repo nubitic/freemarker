@@ -22,14 +22,14 @@ package freemarker.ext.jsp;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 
-import javax.el.ELContext;
-import javax.servlet.jsp.JspApplicationContext;
-import javax.servlet.jsp.JspContext;
-import javax.servlet.jsp.JspFactory;
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.el.ELException;
-import javax.servlet.jsp.el.ExpressionEvaluator;
-import javax.servlet.jsp.el.VariableResolver;
+import jakarta.el.ELContext;
+import jakarta.servlet.jsp.JspApplicationContext;
+import jakarta.servlet.jsp.JspContext;
+import jakarta.servlet.jsp.JspFactory;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.el.ELException;
+import jakarta.servlet.jsp.el.ExpressionEvaluator;
+import jakarta.servlet.jsp.el.VariableResolver;
 
 import freemarker.log.Logger;
 import freemarker.template.TemplateModelException;

@@ -19,8 +19,8 @@
 
 package freemarker.ext.jsp.taglibmembers;
 
-import javax.servlet.jsp.PageContext;
-import javax.servlet.jsp.tagext.SimpleTagSupport;
+import jakarta.servlet.jsp.PageContext;
+import jakarta.servlet.jsp.tagext.SimpleTagSupport;
 
 import freemarker.template.utility.StringUtil;
 
